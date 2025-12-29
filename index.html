@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>電験三種 過去問アプリ</title>
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1976d2">
+</head>
+<body>
+
+<h1>電験三種 過去問</h1>
+<!-- 年度選択 -->
+<select id="yearSelect">
+  <option value="2023">2023</option>
+  <option value="2022">2022</option>
+  <option value="2021">2021</option>
+</select>
+
+<!-- 科目選択 -->
+<select id="subjectSelect">
+  <option value="theory">理論</option>
+  <option value="power">電力</option>
+  <option value="machine">機械</option>
+  <option value="law">法規</option>
+</select>
+
+
+<!-- 出題モード -->
+<label>
+  <input type="radio" name="mode" value="order" checked>
+  順番
+</label>
+<label>
+  <input type="radio" name="mode" value="random">
+  ランダム
+</label>
+
+<!-- 復習モード -->
+<label>
+  <input type="checkbox" id="reviewMode">
+  復習モード（間違えた問題）
+</label>
+
+<p id="counter"></p>
+<p id="score"></p>
+
+
+<div id="question"></div>
+<div id="choices"></div>
+
+<p id="result"></p>
+
+<button id="nextBtn">次の問題</button>
+
+<script src="script.js"></script>
+</body>
+</html>
